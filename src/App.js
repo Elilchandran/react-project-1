@@ -1,50 +1,77 @@
 /*import React from 'react';
-function App(props) {
-  const {notes}=props
+import image from './image.png';
+
+function App(){
   return (
-    
     <div>
-      <h1>Notes</h1>
-    <ul>
-    {notes.map(note=>
-      <li key={note.id}>{note.content}</li>
-       )}
-    </ul>
+      <nav>
+       <header>
+        <img src={image} width="40px" alt="logo"/>
+       </header>
+       <h1>Reasons I'm excited to learn React</h1>
+    <ol>
+      <li>yes it so good</li>
+      <li>yes it so good</li>
+      <li>yes it so good</li>
+      <li>yes it so good</li>
+      <li>yes it so good</li>
+    </ol>
+    <footer>
+      <small>© 2021 Ziroll development. All rights reserved.</small>
+    </footer>
+      </nav>
+    </div>
+);
+} 
+
+
+export default App;*/
+import React from "react";
+import image from "./image.png";
+
+function Header() {  
+  return (
+    <header>
+      <nav className="nav">
+        <img src={image} className="nav-logo" alt="logo" />
+        <ul className="nav-items">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Content</li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <small>© 2021 Ziroll development. All rights reserved.</small>
+    </footer>
+  );
+}
+
+function MainContent() {
+  return (
+    <div>
+      <h1>Reasons I'm excited to learn React</h1>
+      <ol>
+        <li>
+          It's a popular library, so I'll be able to fit in with the cool kids!
+        </li>
+        <li>I'm more likely to get a job as a developer if I know React</li>
+      </ol>
     </div>
   );
 }
 
-export default App;*/
-import React from 'react';
-function Note({note}) {
-  if(note.important){
-    return (
-      <li>{note.content} ⭐</li>
-    )
-    } 
-    return (
-      <li>{note.content}</li>
-    )
-    }
-
- 
-  function App({notes}) {
-    const addNote=(event)=>{
-      event.preventDefault();
-      console.log('button clicked',event.target);
-    }
-    return (
+function App() {
+  return (
     <div>
-      <h1>Notes</h1>
-    <ul>
-    {notes.map(note=>
-      <Note key={note.id} note= {note}/>
-       )}
-    </ul>
-    <form onSubmit={addNote}>
-      <input/>
-      <button onClilck={addNote}>Save Note</button>
-    </form>
+      <Header />
+      <MainContent />
+      <Footer />
     </div>
   );
 }
