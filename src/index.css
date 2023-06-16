@@ -1,17 +1,70 @@
-.nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+* {
+    box-sizing: border-box;
+    
 }
 
-.nav-logo{
-    width:20%;
-}
-.nav-items{
-    list-style: none;
-    display:flex;
+body {
+    margin: 0;
+    font-family: inter,sans-serif;
+    height:100vh;
+    background-color:#282D35;
 }
 
-.nav-items>li{
-    padding:10px
+nav {
+    display: flex;
+    align-items: center;
+    background-color:  #21222A;
+    box-shadow: 10px 5px 5px rgb(50, 139, 166);
+    height: 90px;
+    padding: 30px 25px;
+}
+
+nav > h3, nav > h4 {
+    margin: 0;
+}
+
+nav > h3 {
+    margin-right: auto;
+    color: #61DAFB;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+nav > h4 {
+    color: #DEEBF8;
+    font-weight: 600;
+}
+
+nav > img {
+    height: 30px;
+    margin-right: 7px;
+}
+
+main {
+    padding: 57px 27px;
+    color: white;
+    background-image: url("C:\Users\Karthik\Documents\scrimba\first react\class\src\Rimg.png");
+    background-repeat: no-repeat;
+    background-position: right 85%;
+}
+
+.h1-item {
+    margin: 0;
+    font-size: 39px;
+    letter-spacing: -0.05em;
+}
+
+.ul-item {
+    margin-top: 46px;
+    max-width: 50%;
+}
+
+.ul-item > li {
+    line-height: 19px;
+    padding-block:10px;;
+}
+
+.ul-item > li::marker {
+    font-size: 3rem;
+    color:#61DAFB;
 }
